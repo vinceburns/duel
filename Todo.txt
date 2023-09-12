@@ -1,0 +1,16 @@
+Tasks:
+	Implement game engine to run via command line
+	    Define all cards in each age (see cards/age<x>.csv, build_actions.py, and endgame_actions.py).
+		Define all wonders. 
+		Shuffle and select wonders. 
+		Parse cards.
+		Shuffle cards.
+		Define engine for card selection.
+            Create the temple and only let uncovered cards be selected. 
+	Create Backend for running the above engine.
+		Define APIs and how game state management happens.
+	    HTTP? Custom UDP/TCP Application stack?
+		Determine selection. Invite based? Public matchmaking?
+	Create Frontend
+		Most likely will be HTML/JS. Call the APIs from JS
+		Allow for single machine, multiplayer mode. 

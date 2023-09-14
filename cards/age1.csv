@@ -1,13 +1,13 @@
-#name,color,cost,free_build,wp,build_exec,endgam_exec,image,
+#name,color,cost,free_build,wp,build_func,endgam_func,image,
 #None == n/a
 #name -- Useful for us tracking which card we meant to be mapping
 #color -- color of the card
 #cost -- The resouces this card costs:
-#     w:<n_woods>, s:<n_stone>, b:<n_brick>, p:<n_paper>, g:<n_glass> c:<n_coins> or "free" if it is so.
+#     w:<n_woods>,s:<n_stone>,b:<n_brick>,p:<n_paper>,g:<n_glass>,c:<n_coins> or "free" if it is so.
 #free_build -- The white privelage that allows needing of the cost, See cost.py for available white priveleges.
 #wp -- The white privelege that comes with this card. See cost.py for available white priveleges.
-#build_exec -- Function that lives in build_action.py. this awards coins, resources, etc.
-#endgame_exec -- Awards points @todo 
+#build_func -- Function that lives in build_action.py. this awards coins, resources, etc.
+#endgame_func -- Awards points @todo 
 #image -- Image for the Frontend. @todo  
 #fill this out based on page 18 and 19 of the PDF.
-name=lumber_yard,color=brown,cost=free,free_build=None,wp=None,build_exec=single_wood_build,endgame_exec=None,image=None
+name=lumber_yard,color=brown,cost=free,free_build=None,wp=None,build_func=single_wood_build,endgame_func=None,image=None

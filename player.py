@@ -5,21 +5,21 @@ from os import fsync,system,_exit
 
 
 class Player():
-    def __init__(self, wonders):
-        self.n_coins = 7
+    def __init__(self):
+        self.n_coin = 7
         #brown cards
-        self.n_woods = 0
-        self.n_bricks = 0
-        self.n_stones = 0
-        self.n_browns = 0
+        self.n_wood = 0
+        self.n_brick = 0
+        self.n_stone = 0
+        self.n_brown = 0
         #grey cards
         self.n_glass = 0
         self.n_paper = 0
-        self.n_greys = 0
+        self.n_grey = 0
         #blue
-        self.n_blues = 0
+        self.n_blue = 0
         #green
-        self.n_greens = 0
+        self.n_green = 0
         self.n_globe_looking_thingy = 0
         self.n_globe_looking_thingy = 0
         self.n_scale = 0

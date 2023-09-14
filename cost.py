@@ -4,6 +4,7 @@ import time
 from os import fsync,system,_exit
 
 #These ened to be somewhere game, player, and card all understand. Placeholder for now here. 
+#probably move to a "defines" file
 wps = { "hammer", "horseshoe", "dagger", "wall", "target", "helmet", "book", "gear", "harp", "lamp", "mask", "pillar", "moon", "sun", "droplet", "senate", "jug", "barrel" }
 
 class Cost():

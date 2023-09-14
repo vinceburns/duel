@@ -29,6 +29,7 @@ class Player():
         self.n_feather = 0
         self.n_wheel = 0
         self.n_army = 0
+        self.n_points = 0
         self.stone_post = 0
         self.clay_post = 0
         self.wood_post = 0

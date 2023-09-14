@@ -11,3 +11,4 @@
 #image -- Image for the Frontend. @todo  
 #fill this out based on page 18 and 19 of the PDF.
 name=lumber_yard,color=brown,cost=free,free_build=None,wp=None,build_func=single_wood_build,endgame_func=None,image=None
+name=temple,color=blue,cost=free,free_build=None,wp=mask,build_func=None,endgame_func=blue_3_points,image=None

@@ -1,6 +1,7 @@
 
 import pprint
 import build_actions
+import end_game_action
 import cost
 from cost import wps
 import sys
@@ -88,7 +89,7 @@ def parse_card_fromcsv_line(line, age):
         free_build = None
     elif free_build not in wps:
         raise MyCustomException(f"bad free build value:{free_build}")
-    wp = line.split("free_build=", 1)[1].split(",", 1)[0]
+    wp = line.split("wp=", 1)[1].split(",", 1)[0]
     print(wp)
     if (wp.lower() == "none"):
         wp = None
@@ -110,8 +111,8 @@ def parse_card_fromcsv_line(line, age):
     print(endgame_func)
     if (endgame_func.lower() == "none"):
         endgame_func = None
-    elif hasattr(build_actions, endgame_func):
-        action_function = getattr(build_actions, endgame_func)
+    elif hasattr(end_game_action, endgame_func):
+        action_function = getattr(end_game_action, endgame_func)
         if callable(action_function):
             endgame_func = action_function
         else:

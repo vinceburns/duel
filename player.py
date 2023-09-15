@@ -27,11 +27,11 @@ class Player():
         self.n_triangles = 0
         self.n_feather = 0
         self.n_wheel = 0
-        self.n_army = 0
-        self.n_points = 0
+        #yellow/trading
         self.stone_post = 0
         self.clay_post = 0
         self.wood_post = 0
+        #a trading post that makes paper or glass only 1 coin
         self.paper_and_glass_post = 0
         # a wild of wood/brick/stone
         self.wild_normal = 0
@@ -39,6 +39,28 @@ class Player():
         self.wild_pap_glass = 0
         self.special_tokens = []
         self.wonders = []
+        #army
+        self.n_army = 0
+        self.army_zone_coin_tokens = [2, 3]
+        #point counter for the end of the game
+        self.n_points = 0
+
+    def remove_coins(self, n_coin):
+        if n_coin > self.n_coin:
+            self.n_coin = 0
+        else:
+            self.n_coin -= n_coin
+    def remove_army_coins(self, zone):
+        if (zone in self.army_zone_coin_tokens):
+            self.army_zone_coin_tokens.remove(zone)
+            if (zone == 2):
+                self.remove_coins(2)
+            if (zone == 3):
+                self.remove_coins(2)
+        else:
+            print("already removed this zone")
+        return
+
 
 
     

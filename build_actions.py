@@ -50,6 +50,7 @@ def double_stone_build(game):
 def piraeus(game):
     build_player = game.active_player()
     build_player.wild_pap_glass += 1
+    game.write_to_todo("Piraeus: TODO NEED ABILITY TO GO AGAIN")
     return
 
 def appian_way(game):
@@ -57,25 +58,29 @@ def appian_way(game):
     inactive_player = game.inactive_player()
     build_player.n_coin += 3
     inactive_player.remove_coins(3)
-    #todo go again
+    game.write_to_todo("Appian way: TODO NEED ABILITY TO GO AGAIN")
     return
 
 def mausoleum(game):
     build_player = game.active_player()
+    game.write_to_todo("Mausoleum: TODO NEED ABILITY TO SELECT FROM DISCARD PILE")
     return
 
 def sphinx(game):
     build_player = game.active_player()
+    game.write_to_todo("SPHINX: TODO NEED ABILITY TO GO AGAIN")
     return
 
 def zeus(game):
     build_player = game.active_player()
     build_player.n_army += 1
+    game.write_to_todo("ZEUS: TODO NEED TO DESTROY BROWN CARD OF OPPONENT")
     return
 
 def artemis(game):
     build_player = game.active_player()
     build_player.n_coin += 12
+    game.write_to_todo("artemis: TODO NEED ABILITY TO GO AGAIN")
     return
 
 def no_action(game):

@@ -19,6 +19,9 @@ class Game():
         self.wonder_cards = []
         #this is the index in the list to the active player. it is always 0 or 1. 
         self.active_player_index = 0
+        self.todo_file = "todo_notes.txt"
+        with open(self.todo_file, "w") as f:
+            f.truncate(0)
         #things we will likely need, The active board where the laid out cards to be selected are on
 
     def play(self):
@@ -29,6 +32,10 @@ class Game():
         self.age = 1
         self.setup_age1()
         self.play_age()
+
+    def write_to_todo(self, output):
+        with open(self.todo_file, "a") as f:
+            f.write(output+"\r\n")
 
     def play_age(self):
         return

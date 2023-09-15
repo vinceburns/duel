@@ -33,9 +33,11 @@ class Card():
         pp = pprint.PrettyPrinter(indent = 4)
         pp.pprint(vars(self))
 
-    def build(self, game):
+    def build(self, game, build_player):
         if self.build_func != None:
-            return (self.build_func(game))
+            return (self.build_func(game, build_player))
+
+
 
 def parse_cost(cost_str):
     n_coins = 0

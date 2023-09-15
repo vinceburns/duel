@@ -3,6 +3,18 @@ def add_3_points(game):
     build_player = game.active_player()
     build_player.n_points += 3 
 
+def add_9_points(game):
+    build_player = game.active_player()
+    build_player.n_points += 9 
+
+def add_6_points(game):
+    build_player = game.active_player()
+    build_player.n_points += 6 
+
+def add_2_points(game):
+    build_player = game.active_player()
+    build_player.n_points += 2 
+
 
 def no_action(game):
     return

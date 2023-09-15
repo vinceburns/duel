@@ -10,5 +10,9 @@
 #endgame_func -- Awards points @todo 
 #image -- Image for the Frontend. @todo  
 #fill this out based on page 18 and 19 of the PDF.
-name=lumber_yard,color=brown,cost=free,free_build=None,wp=None,build_func=single_wood_build,endgame_func=None,image=None
-name=temple,color=blue,cost=free,free_build=None,wp=mask,build_func=None,endgame_func=blue_3_points,image=None
+name=themausoleum,color=wonder,cost=p:1,g:2,b:2,free_build=None,wp=None,build_func=mausoleum,endgame_func=add_2_points,image=None
+name=piraeus,color=wonder,cost=w:2,s:1,b:1,free_build=None,wp=None,build_func=piraeus,endgame_func=add_2_points,image=None
+name=pyramids,color=wonder,cost=s:3,p:1,free_build=None,wp=None,build_func=None,endgame_func=add_9_points,image=None
+name=thesphinx,color=wonder,cost=g:2,b:1,free_build=None,wp=None,build_func=sphinx,endgame_func=add_6_points,image=None
+name=statueofzeus,color=wonder,cost=p:2,b:1,w:1,s:1,free_build=None,wp=None,build_func=zeus,endgame_func=add_3_points,image=None
+name=templeofartemis,color=wonder,cost=p:1,g:1,w:1,s:1,free_build=None,wp=None,build_func=artemis,endgame_func=None,image=None

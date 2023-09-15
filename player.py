@@ -21,7 +21,6 @@ class Player():
         #green
         self.n_green = 0
         self.n_globe_looking_thingy = 0
-        self.n_globe_looking_thingy = 0
         self.n_scale = 0
         self.n_map = 0
         self.n_mortle_and_pestle = 0

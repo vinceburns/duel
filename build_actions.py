@@ -48,6 +48,14 @@ def double_stone_build(game):
     build_player.n_brown += 1
     return
 
+def appian_way(game):
+    build_player = game.active_player()
+    inactive_player = game.inactive_player()
+    build_player.n_coins += 3
+    inactive_player.n_coins -= 3
+    #todo go again
+    return
+
 def no_action(game):
     return
 

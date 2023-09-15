@@ -48,6 +48,8 @@ class Game():
 
     def active_player(self):
         return(self.players[self.active_player_index])
+    def inactive_player(self):
+        return(self.players[self.active_player_index ^ 1])
 def main():
     game = Game()
     game.play()

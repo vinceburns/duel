@@ -16,13 +16,14 @@ class Game():
         self.army_zone = 0
         self.discard_pile = []
         self.age_cards = []
+        self.wonder_cards = []
         #this is the index in the list to the active player. it is always 0 or 1. 
         self.active_player_index = 0
         #things we will likely need, The active board where the laid out cards to be selected are on
 
     def play(self):
         #woohoo let's have some fun. 
-        #initialize wonders
+        self.init_wonders()
         #select wonders
         #setup Green token thingys
         self.age = 1
@@ -66,10 +67,21 @@ class Game():
                     current_card.build(self)
                     self.age_cards.append(current_card)
 
+    def init_wonders(self):
+        with open("cards/wonders.csv", "r") as f:
+            lines = f.readlines()
+            for line in lines:
+                current_card = card.parse_card_fromcsv_line(line, 1)
+                if current_card:
+                    current_card.build(self)
+                    self.wonder_cards.append(current_card)
+
     def active_player(self):
         return(self.players[self.active_player_index])
+
     def inactive_player(self):
         return(self.players[self.active_player_index ^ 1])
+
 def main():
     game = Game()
     game.play()

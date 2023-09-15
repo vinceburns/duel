@@ -16,5 +16,24 @@ class Cost():
         self.n_glass = n_glass
         self.n_paper = n_paper
 
+    def print_cost(self):
+        printer = ""
+        if self.n_coins:
+            printer += f"coins:{self.n_coins} "
+        if self.n_wood:
+            printer += f"wood:{self.n_wood} "
+        if self.n_stone:
+            printer += f"stone:{self.n_stone} "
+        if self.n_brick:
+            printer += f"brick:{self.n_brick} "
+        if self.n_paper:
+            printer += f"paper:{self.n_paper} "
+        if self.n_glass:
+            printer += f"glass:{self.n_glass} "
+        if len(printer):
+            print(printer)
+        else:
+            print("free")
+
 if __name__ == '__main__':
     main()

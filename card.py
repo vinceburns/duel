@@ -2,8 +2,7 @@
 import pprint
 import build_actions
 import end_game_action
-import cost
-from cost import wps
+from cost import wps,Cost
 import sys
 import time
 from os import fsync,system,_exit
@@ -45,7 +44,11 @@ def parse_cost(cost_str):
     n_brick = 0
     n_glass = 0
     n_paper = 0
-    costs = cost_str.replace(" ", "").split(",")
+    if (("(" not in cost_str) or (")" not in cost_str)):
+        print("bad cost")
+        print(cost_str)
+        exit()
+    costs = cost_str.replace("(", "").replace(")", "").split(" ")
     for resource in costs:
         if ((resource.split(":", 1)[0]).lower() == "w"):
             n_wood = int(resource.split(":", 1)[1], 10)
@@ -58,10 +61,11 @@ def parse_cost(cost_str):
         elif ((resource.split(":", 1)[0]).lower() == "p"):
             n_paper = int(resource.split(":", 1)[1], 10)
         elif ((resource.split(":", 1)[0]).lower() == "c"):
-            n_coin = int(resource.split(":", 1)[1], 10)
+            n_coins = int(resource.split(":", 1)[1], 10)
         else:
             raise MyCustomException(f"bad cost added:{resource}")
-    return(cost.Cost(n_coins, n_wood, n_stone, n_brick, n_glass, n_paper))
+    ret = (Cost(n_coins, n_wood, n_stone, n_brick, n_glass, n_paper))
+    return (ret)
 
 
 
@@ -73,7 +77,7 @@ def parse_card_fromcsv_line(line, age):
     color = line.split("color=", 1)[1].split(",", 1)[0]
     cost_str = line.split("cost=", 1)[1].split(",", 1)[0]
     if (cost_str == "free"):
-        card_cost = cost.Cost()
+        card_cost = Cost()
     else:
         card_cost = parse_cost(cost_str)
     free_build = line.split("free_build=", 1)[1].split(",", 1)[0]
@@ -109,7 +113,7 @@ def parse_card_fromcsv_line(line, age):
     else:
         raise MyCustomException(f"Couldn't find! {endgame_func}")
     image = line.split("image=", 1)[1].strip()
-    card = Card(age, name, color, cost, free_build, wp, build_func, endgame_func, image)
+    card = Card(age, name, color, card_cost, free_build, wp, build_func, endgame_func, image)
     return(card)
     
 

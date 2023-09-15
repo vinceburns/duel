@@ -47,12 +47,35 @@ def double_stone_build(game):
     build_player.n_brown += 1
     return
 
+def piraeus(game):
+    build_player = game.active_player()
+    build_player.wild_pap_glass += 1
+    return
+
 def appian_way(game):
     build_player = game.active_player()
     inactive_player = game.inactive_player()
-    build_player.n_coins += 3
-    inactive_player.n_coins -= 3
+    build_player.n_coin += 3
+    inactive_player.remove_coins(3)
     #todo go again
+    return
+
+def mausoleum(game):
+    build_player = game.active_player()
+    return
+
+def sphinx(game):
+    build_player = game.active_player()
+    return
+
+def zeus(game):
+    build_player = game.active_player()
+    build_player.n_army += 1
+    return
+
+def artemis(game):
+    build_player = game.active_player()
+    build_player.n_coin += 12
     return
 
 def no_action(game):

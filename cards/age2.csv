@@ -10,3 +10,7 @@
 #endgame_exec -- Awards points @todo 
 #image -- Image for the Frontend. @todo  
 #fill this out based on page 18 and 19 of the PDF.
+name=library,color=green,cost=(s:1 w:1 g:1),free_build=book,wp=None,build_func=feather,endgame_func=add_2_points,image=None
+name=dispensary,color=green,cost=(s:1 b:2),free_build=gear,wp=None,build_func=mortleandpestle,endgame_func=add_2_points,image=None
+name=school,color=green,cost=(w:1 p:2),free_build=None,wp=harp,build_func=wheel,endgame_func=add_1_points,image=None
+name=laboratory,color=green,cost=(w:1 g:2),free_build=None,wp=lamp,build_func=triangle,endgame_func=add_1_points,image=None

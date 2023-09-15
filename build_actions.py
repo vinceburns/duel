@@ -61,7 +61,42 @@ def artemis(game, build_player):
     game.write_to_todo("artemis: TODO NEED ABILITY TO GO AGAIN")
     return
 
-def no_action(game):
+def single_army_build(game, build_player):
+    build_player.n_army += 1
+    return
+
+def triangle(game, build_player):
+    build_player.n_triangles += 1
+    return
+
+def wheel(game, build_player):
+    build_player.n_wheel += 1
+    return
+
+def feather(game, build_player):
+    build_player.n_feather += 1
+    return
+
+def mortleandpestle(game, build_player):
+    build_player.n_mortle_and_pestle += 1
+    return
+
+def stone_post(game, build_player):
+    build_player.stone_post = 1
+    return
+
+def clay_post(game, build_player):
+    build_player.brick_post = 1
+    return
+
+def wood_post(game, build_player):
+    build_player.wood_post = 1
+    return
+
+def add_4_coins(game, build_player):
+    build_player.n_coin += 4
+    return
+
 def no_action(game, build_player):
     return
 

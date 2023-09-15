@@ -11,4 +11,25 @@
 #image -- Image for the Frontend. @todo  
 #fill this out based on page 18 and 19 of the PDF.
 name=lumber_yard,color=brown,cost=free,free_build=None,wp=None,build_func=single_wood_build,endgame_func=None,image=None
-name=temple,color=blue,cost=free,free_build=None,wp=mask,build_func=None,endgame_func=add_3_points,image=None
+name=logging_camp,color=brown,cost=(c:1),free_build=None,wp=None,build_func=single_wood_build,endgame_func=None,image=None
+name=clay_pool,color=brown,cost=free,free_build=None,wp=None,build_func=single_brick_build,endgame_func=None,image=None
+name=clay_pit,color=brown,cost=(c:1),free_build=None,wp=None,build_func=single_brick_build,endgame_func=None,image=None
+name=quarry,color=brown,cost=free,free_build=None,wp=None,build_func=single_stone_build,endgame_func=None,image=None
+name=stone_pit,color=brown,cost=(c:1),free_build=None,wp=None,build_func=single_stone_build,endgame_func=None,image=None
+name=glassworks,color=grey,cost=(c:1),free_build=None,wp=None,build_func=single_glass_build,endgame_func=None,image=None
+name=press,color=grey,cost=(c:1),free_build=None,wp=None,build_func=single_paper_build,endgame_func=None,image=None
+name=guardtower,color=red,cost=free,free_build=None,wp=None,build_func=single_army_build,endgame_func=None,image=None
+name=workshop,color=green,cost=(p:1),free_build=None,wp=None,build_func=triangle,endgame_func=add_1_points,image=None
+name=apothecary,color=green,cost=(p:1),free_build=None,wp=None,build_func=wheel,endgame_func=add_1_points,image=None
+name=stone_reserve,color=yellow,cost=(p:1),free_build=None,wp=None,build_func=stone_post,endgame_func=None,image=None
+name=clay_reserve,color=yellow,cost=(p:1),free_build=None,wp=None,build_func=clay_post,endgame_func=None,image=None
+name=wood_reserve,color=yellow,cost=(p:1),free_build=None,wp=None,build_func=wood_post,endgame_func=None,image=None
+name=stable,color=red,cost=(w:1),free_build=None,wp=horseshoe,build_func=single_army_build,endgame_func=None,image=None
+name=garrison,color=red,cost=(b:1),free_build=None,wp=dagger,build_func=single_army_build,endgame_func=None,image=None
+name=palisade,color=red,cost=(c:2),free_build=None,wp=wall,build_func=single_army_build,endgame_func=None,image=None
+name=scriptorium,color=green,cost=(c:2),free_build=None,wp=book,build_func=feather,endgame_func=None,image=None
+name=pharmacist,color=green,cost=(c:2),free_build=None,wp=gear,build_func=mortleandpestle,endgame_func=None,image=None
+name=theater,color=blue,cost=free,free_build=None,wp=mask,build_func=None,endgame_func=add_3_points,image=None
+name=altar,color=blue,cost=free,free_build=None,wp=moon,build_func=None,endgame_func=add_3_points,image=None
+name=baths,color=blue,cost=(s:1),free_build=None,wp=droplet,build_func=None,endgame_func=add_3_points,image=None
+name=tavern,color=yellow,cost=free,free_build=None,wp=jug,build_func=add_4_coins,endgame_func=add_3_points,image=None

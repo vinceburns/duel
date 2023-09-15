@@ -31,6 +31,7 @@ class Player():
         self.stone_post = 0
         self.clay_post = 0
         self.wood_post = 0
+        self.n_yellow = 0
         #a trading post that makes paper or glass only 1 coin
         self.paper_and_glass_post = 0
         # a wild of wood/brick/stone
@@ -39,6 +40,8 @@ class Player():
         self.wild_pap_glass = 0
         self.special_tokens = []
         self.wonders = []
+        self.built_cards = []
+        self.wps = []
         #army
         self.n_army = 0
         self.army_zone_coin_tokens = [2, 3]

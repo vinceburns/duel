@@ -11,7 +11,9 @@ class Game():
         self.players.append(player.Player())
         self.players.append(player.Player())
         self.age = 0
+        #postive values means player 0 is winning, negative = player 1 is winning
         self.army_pos = 0
+        self.army_zone = 0
         self.discard_pile = []
         self.age_cards = []
         #this is the index in the list to the active player. it is always 0 or 1. 
@@ -35,6 +37,25 @@ class Game():
         #swap player
         #top_o_loop
 
+    def update_army_pos(self):
+        #zone 0 == even zone 1 = player winning by 1 or 2 points
+        self.army_pos = self.players[0].n_army - self.players[1].n_army
+        losing_player_idx = 1 if (self.army_pos > 0) else 0
+        if (abs(self.army_pos) > 8):
+            print(f"END OF GAME! Player {losing_player_idx ^ 1} won!!")
+            exit(1)
+        elif (abs(self.army_pos) > 5):
+            self.army_zone = 3
+        elif (abs(self.army_pos) > 2):
+            self.army_zone = 2
+            self.players[losing_player_idx].remove_army_coins(self.army_zone)
+        elif (abs(self.army_pos) > 0):
+            self.army_zone = 1
+            self.players[losing_player_idx].remove_army_coins(self.army_zone)
+        else:
+            self.army_zone = 0
+
+        
     def setup_age1(self):
         self.age_cards = []
         with open("cards/age1.csv", "r") as f:

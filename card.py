@@ -48,17 +48,17 @@ def parse_cost(cost_str):
     costs = cost_str.replace(" ", "").split(",")
     for resource in costs:
         if ((resource.split(":", 1)[0]).lower() == "w"):
-            n_wood = int(resource.split(":", 1)[0], 10)
+            n_wood = int(resource.split(":", 1)[1], 10)
         elif ((resource.split(":", 1)[0]).lower() == "s"):
-            n_stone = int(resource.split(":", 1)[0], 10)
+            n_stone = int(resource.split(":", 1)[1], 10)
         elif ((resource.split(":", 1)[0]).lower() == "b"):
-            n_brick = int(resource.split(":", 1)[0], 10)
+            n_brick = int(resource.split(":", 1)[1], 10)
         elif ((resource.split(":", 1)[0]).lower() == "g"):
-            n_glass = int(resource.split(":", 1)[0], 10)
+            n_glass = int(resource.split(":", 1)[1], 10)
         elif ((resource.split(":", 1)[0]).lower() == "p"):
-            n_paper = int(resource.split(":", 1)[0], 10)
+            n_paper = int(resource.split(":", 1)[1], 10)
         elif ((resource.split(":", 1)[0]).lower() == "c"):
-            n_coin = int(resource.split(":", 1)[0], 10)
+            n_coin = int(resource.split(":", 1)[1], 10)
         else:
             raise MyCustomException(f"bad cost added:{resource}")
     return(cost.Cost(n_coins, n_wood, n_stone, n_brick, n_glass, n_paper))

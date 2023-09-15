@@ -54,12 +54,12 @@ class Game():
             exit(1)
         elif (abs(self.army_pos) > 5):
             self.army_zone = 3
+            self.players[losing_player_idx].remove_army_coins(self.army_zone)
         elif (abs(self.army_pos) > 2):
             self.army_zone = 2
             self.players[losing_player_idx].remove_army_coins(self.army_zone)
         elif (abs(self.army_pos) > 0):
             self.army_zone = 1
-            self.players[losing_player_idx].remove_army_coins(self.army_zone)
         else:
             self.army_zone = 0
 
@@ -78,6 +78,7 @@ class Game():
         elif card.color == "yellow":
             build_player.n_yellow += 1
         card.build(self, build_player)
+        self.update_army_pos()
         
     def setup_age1(self):
         self.age_cards = []

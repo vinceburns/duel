@@ -60,8 +60,6 @@ class Player():
                 self.remove_coins(2)
             if (zone == 3):
                 self.remove_coins(2)
-        else:
-            print("already removed this zone")
         return
 
 

@@ -35,9 +35,7 @@ class Card():
         pp.pprint(vars(self))
 
     def build(self, game):
-        print(type(self.build_func))
         if self.build_func != None:
-            print("trying")
             return (self.build_func(game))
 
 def parse_cost(cost_str):
@@ -48,7 +46,6 @@ def parse_cost(cost_str):
     n_glass = 0
     n_paper = 0
     costs = cost_str.replace(" ", "").split(",")
-    print(costs)
     for resource in costs:
         if ((resource.split(":", 1)[0]).lower() == "w"):
             n_wood = int(resource.split(":", 1)[0], 10)
@@ -73,30 +70,23 @@ def parse_card_fromcsv_line(line, age):
     if (line.startswith("#")):
         return None
     name = line.split("name=", 1)[1].split(",", 1)[0]
-    print(name)
     color = line.split("color=", 1)[1].split(",", 1)[0]
-    print(color)
     cost_str = line.split("cost=", 1)[1].split(",", 1)[0]
     if (cost_str == "free"):
         card_cost = cost.Cost()
     else:
         card_cost = parse_cost(cost_str)
-    print(card_cost)
-    #todo serialize the cost in a Cost object
     free_build = line.split("free_build=", 1)[1].split(",", 1)[0]
-    print(free_build)
     if (free_build.lower() == "none"):
         free_build = None
     elif free_build not in wps:
         raise MyCustomException(f"bad free build value:{free_build}")
     wp = line.split("wp=", 1)[1].split(",", 1)[0]
-    print(wp)
     if (wp.lower() == "none"):
         wp = None
     elif wp not in wps:
         raise MyCustomException(f"bad free build value:{wp}")
     build_func = line.split("build_func=", 1)[1].split(",", 1)[0]
-    print(build_func)
     if (build_func.lower() == "none"):
         build_func = None
     elif hasattr(build_actions, build_func):
@@ -108,7 +98,6 @@ def parse_card_fromcsv_line(line, age):
     else:
         raise MyCustomException(f"Couldn't find! {build_func}")
     endgame_func = line.split("endgame_func=", 1)[1].split(",", 1)[0]
-    print(endgame_func)
     if (endgame_func.lower() == "none"):
         endgame_func = None
     elif hasattr(end_game_action, endgame_func):
@@ -120,7 +109,6 @@ def parse_card_fromcsv_line(line, age):
     else:
         raise MyCustomException(f"Couldn't find! {endgame_func}")
     image = line.split("image=", 1)[1].strip()
-    print(image)
     card = Card(age, name, color, cost, free_build, wp, build_func, endgame_func, image)
     return(card)
     

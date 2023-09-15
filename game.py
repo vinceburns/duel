@@ -42,7 +42,6 @@ class Game():
             for line in lines:
                 current_card = card.parse_card_fromcsv_line(line, 1)
                 if current_card:
-                    current_card.print()
                     current_card.build(self)
                     self.age_cards.append(current_card)
 

@@ -63,6 +63,21 @@ class Game():
         else:
             self.army_zone = 0
 
+    def build_card(self, card, build_player):
+        build_player.built_cards.append(self)
+        if card.wp != None:
+            build_player.wps.append(card.wp)
+        if card.color == "brown":
+            build_player.n_brown += 1
+        elif card.color == "grey":
+            build_player.n_grey += 1
+        elif card.color == "blue":
+            build_player.n_blue += 1
+        elif card.color == "green":
+            build_player.n_green += 1
+        elif card.color == "yellow":
+            build_player.n_yellow += 1
+        card.build(self, build_player)
         
     def setup_age1(self):
         self.age_cards = []
@@ -71,7 +86,9 @@ class Game():
             for line in lines:
                 current_card = card.parse_card_fromcsv_line(line, 1)
                 if current_card:
-                    current_card.build(self)
+                    print(f"Name:{current_card.name} cost:")
+                    self.build_card(current_card, self.players[0])
+                    print(self.players[0].wps)
                     self.age_cards.append(current_card)
 
     def init_wonders(self):
@@ -80,7 +97,8 @@ class Game():
             for line in lines:
                 current_card = card.parse_card_fromcsv_line(line, 1)
                 if current_card:
-                    current_card.build(self)
+                    print(f"Name:{current_card.name} cost:")
+                    self.build_card(current_card, self.players[0])
                     self.wonder_cards.append(current_card)
 
     def active_player(self):

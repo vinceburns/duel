@@ -10,3 +10,13 @@
 #endgame_exec -- Awards points @todo 
 #image -- Image for the Frontend. @todo  
 #fill this out based on page 18 and 19 of the PDF.
+name=arsenal,color=red,cost=(w:2 b:3),free_build=None,wp=None,build_func=triple_army_build,endgame_func=None,image=None
+name=courthouse,color=red,cost=(c:8),free_build=None,wp=None,build_func=triple_army_build,endgame_func=None,image=None
+name=academy,color=green,cost=(w:1 s:1 g:2),free_build=None,wp=None,build_func=map,endgame_func=add_3_points,image=None
+name=study,color=green,cost=(w:2 p:1 g:1),free_build=None,wp=None,build_func=map,endgame_func=add_3_points,image=None
+name=chamber_of_commerce,color=yellow,cost=(p:2),free_build=None,wp=None,build_func=add_3_coins_per_grey,endgame_func=add_3_points,image=None
+name=port,color=yellow,cost=(w:1 p:1 g:1),free_build=None,wp=None,build_func= add_2_coins_per_brown,endgame_func=add_3_points,image=None
+name=armory,color=yellow,cost=(s:2 g:1),free_build=None,wp=None,build_func= add_1_coins_per_red,endgame_func=add_3_points,image=None
+name=palace,color=blue,cost=(w:1 s:1 b:1 g:2),free_build=None,wp=None,build_func=None,endgame_func=add_7_points,image=None
+name=town_hall,color=blue,cost=(w:2 s:3),free_build=None,wp=None,build_func=None,endgame_func=add_7_points,image=None
+name=obelisk,color=blue,cost=(s:2 g:1),free_build=None,wp=None,build_func=None,endgame_func=add_5_points,image=None

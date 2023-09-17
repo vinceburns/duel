@@ -65,6 +65,10 @@ def single_army_build(game, build_player):
     build_player.n_army += 1
     return
 
+def triple_army_build(game, build_player):
+    build_player.n_army += 3
+    return
+
 def triangle(game, build_player):
     build_player.n_triangles += 1
     return
@@ -93,8 +97,30 @@ def wood_post(game, build_player):
     build_player.wood_post = 1
     return
 
+def map(game, build_player):
+    build_player.n_map += 1
+    return
+
 def add_4_coins(game, build_player):
     build_player.n_coin += 4
+    return
+
+def add_3_coins_per_grey(game, build_player):
+    inactive_player = game.inactive_player()
+    n_cards = max(build_player.n_grey, inactive_player.n_grey)
+    build_player.n_coin += 3*n_cards
+    return
+
+def add_2_coins_per_brown(game, build_player):
+    inactive_player = game.inactive_player()
+    n_cards = max(build_player.n_brown, inactive_player.n_brown)
+    build_player.n_coin += 2*n_cards
+    return
+
+def add_1_coins_per_red(game, build_player):
+    inactive_player = game.inactive_player()
+    n_cards = max(build_player.n_red, inactive_player.n_red)
+    build_player.n_coin += n_cards
     return
 
 def no_action(game, build_player):

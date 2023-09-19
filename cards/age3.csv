@@ -20,3 +20,13 @@ name=armory,color=yellow,cost=(s:2 g:1),free_build=None,wp=None,build_func= add_
 name=palace,color=blue,cost=(w:1 s:1 b:1 g:2),free_build=None,wp=None,build_func=None,endgame_func=add_7_points,image=None
 name=town_hall,color=blue,cost=(w:2 s:3),free_build=None,wp=None,build_func=None,endgame_func=add_7_points,image=None
 name=obelisk,color=blue,cost=(s:2 g:1),free_build=None,wp=None,build_func=None,endgame_func=add_5_points,image=None
+name=fortifications,color=red,cost=(s:2 b:1 p:1),free_build=wall,wp=None,build_func=double_army_build,endgame_func=None,image=None
+name=siege_workshop,color=red,cost=(w:3 g:1),free_build=target,wp=None,build_func=double_army_build,endgame_func=None,image=None
+name=circus,color=red,cost=(s:2 b:2),free_build=helmet,wp=None,build_func=double_army_build,endgame_func=None,image=None
+name=university,color=green,cost=(b:1 p:1 g:1),free_build=harp,wp=None,build_func=globe_looking_thingy,endgame_func=add_2_points,image=None
+name=observatory,color=green,cost=(s:1 p:2),free_build=lamp,wp=None,build_func=globe_looking_thingy,endgame_func=add_2_points,image=None
+name=gardens,color=blue,cost=(w:2 b:2),free_build=pillar,wp=None,build_func=None,endgame_func=add_6_points,image=None
+name=pantheon,color=blue,cost=(w:1 b:1 p:2),free_build=sun,wp=None,build_func=None,endgame_func=add_6_points,image=None
+name=senate,color=blue,cost=(s:1 b:2 p:1),free_build=senate,wp=None,build_func=None,endgame_func=add_5_points,image=None
+name=lighthouse,color=yellow,cost=(b:2 g:1),free_build=jug,wp=None,build_func=add_1_coins_per_yellow,endgame_func=add_3_points,image=None
+name=arena,color=yellow,cost=(w:1 s:1 b:1),free_build=barrel,wp=None,build_func=add_2_coins_per_wonder,endgame_func=add_3_points,image=None

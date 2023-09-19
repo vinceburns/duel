@@ -1,3 +1,5 @@
+import numpy
+
 #Each function takes in the player that built it, the opposing player, and the game instance. 
 def single_wood_build(game, build_player):
     build_player.n_wood += 1
@@ -65,6 +67,10 @@ def single_army_build(game, build_player):
     build_player.n_army += 1
     return
 
+def double_army_build(game, build_player):
+    build_player.n_army += 2
+    return
+
 def triple_army_build(game, build_player):
     build_player.n_army += 3
     return
@@ -85,6 +91,14 @@ def mortleandpestle(game, build_player):
     build_player.n_mortle_and_pestle += 1
     return
 
+def map(game, build_player):
+    build_player.n_map += 1
+    return
+
+def globe_looking_thingy(game, build_player):
+    build_player.n_globe_looking_thingy += 1
+    return
+
 def stone_post(game, build_player):
     build_player.stone_post = 1
     return
@@ -97,30 +111,29 @@ def wood_post(game, build_player):
     build_player.wood_post = 1
     return
 
-def map(game, build_player):
-    build_player.n_map += 1
-    return
-
 def add_4_coins(game, build_player):
     build_player.n_coin += 4
     return
 
 def add_3_coins_per_grey(game, build_player):
-    inactive_player = game.inactive_player()
-    n_cards = max(build_player.n_grey, inactive_player.n_grey)
-    build_player.n_coin += 3*n_cards
+    build_player.n_coin += 3*build_player.n_grey
     return
 
 def add_2_coins_per_brown(game, build_player):
-    inactive_player = game.inactive_player()
-    n_cards = max(build_player.n_brown, inactive_player.n_brown)
-    build_player.n_coin += 2*n_cards
+    build_player.n_coin += 2*build_player.n_brown
     return
 
 def add_1_coins_per_red(game, build_player):
-    inactive_player = game.inactive_player()
-    n_cards = max(build_player.n_red, inactive_player.n_red)
-    build_player.n_coin += n_cards
+    build_player.n_coin += build_player.n_red
+    return
+
+def add_1_coins_per_yellow(game, build_player):
+    build_player.n_coin += build_player.n_yellow
+    return
+
+def add_2_coins_per_wonder(game, build_player):
+    n_wonders = numpy.intersect1d(build_player.wonders, build_player.built_cards)
+    build_player.n_coin += 2*n_wonders
     return
 
 def no_action(game, build_player):

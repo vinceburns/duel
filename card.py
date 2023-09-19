@@ -29,6 +29,9 @@ class Card():
         # I imagine this will be some jpeg file or something for the front end to use. This can be left empty until front-end development begins
         self.image_file = image
 
+    def __eq__(self, other):
+        return self.name == other.name
+
     def print(self):
         pp = pprint.PrettyPrinter(indent = 4)
         pp.pprint(vars(self))

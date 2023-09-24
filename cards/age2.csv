@@ -14,3 +14,13 @@ name=library,color=green,cost=(s:1 w:1 g:1),free_build=book,wp=None,build_func=f
 name=dispensary,color=green,cost=(s:1 b:2),free_build=gear,wp=None,build_func=mortleandpestle,endgame_func=add_2_points,image=None
 name=school,color=green,cost=(w:1 p:2),free_build=None,wp=harp,build_func=wheel,endgame_func=add_1_points,image=None
 name=laboratory,color=green,cost=(w:1 g:2),free_build=None,wp=lamp,build_func=triangle,endgame_func=add_1_points,image=None
+name=sawmill,color=brown,cost=(c:2),free_build=None,wp=None,build_func=double_wood_build,endgame_func=None,image=None
+name=brickyard,color=brown,cost=(c:2),free_build=None,wp=None,build_func=double_brick_build,endgame_func=None,image=None
+name=shelf_quarry,color=brown,cost=(c:2),free_build=None,wp=None,build_func=double_stone_build,endgame_func=None,image=None
+name=glass_blower,color=grey,cost=free,free_build=None,wp=None,build_func=single_glass_build,endgame_func=None,image=None
+name=drying_room,color=grey,cost=free,free_build=None,wp=None,build_func=single_paper_build,endgame_func=None,image=None
+name=walls,color=red,cost=(s:2),free_build=None,wp=None,build_func=double_army_build,endgame_func=None,image=None
+name=forum,color=yellow,cost=(b:1 c:3),free_build=None,wp=None,build_func=wild_pap_glass_build,endgame_func=None,image=None
+name=caravansery,color=yellow,cost=(p:1 g:1 c:2),free_build=None,wp=None,build_func=wild_normal_build,endgame_func=None,image=None
+name=cutoms_house,color=yellow,cost=(c:4),free_build=None,wp=None,build_func=paper_and_glass_post_build,endgame_func=None,image=None
+name=tribunal,color=blue,cost=(w:2 g:1),free_build=None,wp=None,build_func=None,endgame_func=add_5_points,image=None

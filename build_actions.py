@@ -33,6 +33,18 @@ def double_stone_build(game, build_player):
     build_player.n_stone += 2
     return
 
+def wild_pap_glass_build(game, build_player):
+    build_player.wild_pap_glass += 1
+    return
+
+def wild_normal_build(game, build_player):
+    build_player.wild_normal += 1
+    return
+
+def paper_and_glass_post_build(game, build_player):
+    build_player.paper_and_glass_post += 1
+    return
+
 def piraeus(game, build_player):
     build_player.wild_pap_glass += 1
     game.write_to_todo("Piraeus: TODO NEED ABILITY TO GO AGAIN")

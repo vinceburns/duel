@@ -1,0 +1,7 @@
+Define card pyramid rules -emily
+Define card selection rules - emily
+shuffle the wonders and select them-vince
+age transitions-emily
+End game - Vince
+Update_science equivalent to the update_army Pos -Vince
+Remove all todos

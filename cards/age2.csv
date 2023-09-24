@@ -24,3 +24,12 @@ name=forum,color=yellow,cost=(b:1 c:3),free_build=None,wp=None,build_func=wild_p
 name=caravansery,color=yellow,cost=(p:1 g:1 c:2),free_build=None,wp=None,build_func=wild_normal_build,endgame_func=None,image=None
 name=cutoms_house,color=yellow,cost=(c:4),free_build=None,wp=None,build_func=paper_and_glass_post_build,endgame_func=None,image=None
 name=tribunal,color=blue,cost=(w:2 g:1),free_build=None,wp=None,build_func=None,endgame_func=add_5_points,image=None
+name=horse_breeders,color=red,cost=(w:1 b:1),free_build=horseshoe,wp=None,build_func=single_army_build,endgame_func=None,image=None
+name=barracks,color=red,cost=(c:3),free_build=dagger,wp=None,build_func=single_army_build,endgame_func=None,image=None
+name=archery_range,color=red,cost=(w:1 s:1 p:1),free_build=None,wp=target,build_func=double_army_build,endgame_func=None,image=None
+name=parade_ground,color=red,cost=(b:2 g:1),free_build=None,wp=helmet,build_func=double_army_build,endgame_func=None,image=None
+name=statue,color=blue,cost=(b:2),free_build=mask,wp=pillar,build_func=None,endgame_func=add_4_points,image=None
+name=temple,color=blue,cost=(w:1 p:1),free_build=moon,wp=sun,build_func=None,endgame_func=add_4_points,image=None
+name=aqueduct,color=blue,cost=(s:3),free_build=droplet,wp=None,build_func=None,endgame_func=add_5_points,image=None
+name=rostrum,color=blue,cost=(w:1 s:1),free_build=None,wp=senate,build_func=None,endgame_func=add_4_points,image=None
+name=brewery,color=yellow,cost=free,free_build=None,wp=barrel,build_func=None,endgame_func=add_6_points,image=None

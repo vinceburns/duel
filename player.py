@@ -38,6 +38,7 @@ class Player():
         self.wild_normal = 0
         # a wild of a paper/glass
         self.wild_pap_glass = 0
+        self.wild_stone_brick_glass = 0
         self.special_tokens = []
         self.wonders = []
         self.built_cards = []

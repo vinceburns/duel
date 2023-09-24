@@ -38,11 +38,34 @@ def piraeus(game, build_player):
     game.write_to_todo("Piraeus: TODO NEED ABILITY TO GO AGAIN")
     return
 
-def appian_way(game, build_player):
+def appian(game, build_player):
     inactive_player = game.inactive_player()
     build_player.n_coin += 3
     inactive_player.remove_coins(3)
     game.write_to_todo("Appian way: TODO NEED ABILITY TO GO AGAIN")
+    return
+
+def maximus(game, build_player):
+    inactive_player = game.inactive_player()
+    build_player.n_army += 1
+    game.write_to_todo("Circus Maximus: TODO NEED ABILITY TO DISCARD OPPONENT'S GREY CARD OF PLAYERS CHOICE")
+    return
+
+def colossus(game, build_player):
+    build_player.n_army += 2
+    return
+
+def library(game, build_player):
+    game.write_to_todo("The Great Library: TODO NEED ABILITY TO SELECT 3 RANDOM PROGRESS TOKENS AND PLAY ONE")
+    return
+
+def lighthouse(game, build_player):
+    build_player.wild_stone_brick_glass += 1
+    return
+
+def gardens(game, build_player):
+    build_player.n_coin += 6
+    game.write_to_todo("GARDENS: TODO NEED ABILITY TO GO AGAIN")
     return
 
 def mausoleum(game, build_player):

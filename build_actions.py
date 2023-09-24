@@ -136,9 +136,33 @@ def add_2_coins_per_wonder(game, build_player):
     build_player.n_coin += 2*n_wonders
     return
 
-def no_action(game, build_player):
+def add_1_coins_per_max_yellow(game, build_player):
+    n_yellow = max(game.inactive_player().n_yellow, build_player.n_yellow)
+    build_player.n_coin += n_yellow
     return
 
+def add_1_coins_per_max_brown_grey(game, build_player):
+    n_brown_grey = max(game.inactive_player().n_brown + game.inactive_player().n_grey, build_player.n_brown + build_player.n_grey)
+    build_player.n_coin += n_brown_grey
+    return
+
+def add_1_coins_per_max_blue(game, build_player):
+    n_blue = max(game.inactive_player().n_blue, build_player.n_blue)
+    build_player.n_coin += n_blue
+    return
+
+def add_1_coins_per_max_green(game, build_player):
+    n_green = max(game.inactive_player().n_green, build_player.n_green)
+    build_player.n_coin += n_green
+    return
+
+def add_1_coins_per_max_red(game, build_player):
+    n_red = max(game.inactive_player().n_red, build_player.n_red)
+    build_player.n_coin += n_red
+    return
+
+def no_action(game, build_player):
+    return
 
 if __name__ == '__main__':
     main()

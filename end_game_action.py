@@ -25,7 +25,36 @@ def add_7_points(game):
 
 def add_9_points(game):
     build_player = game.active_player()
-    build_player.n_points += 9 
+    build_player.n_points += 9
+
+def add_1_points_per_max_yellow(game, build_player):
+    n_yellow = max(game.inactive_player().n_yellow, build_player.n_yellow)
+    build_player.n_points += n_yellow
+
+def add_1_points_per_max_brown_grey(game, build_player):
+    n_brown_grey = max(game.inactive_player().n_brown + game.inactive_player().n_grey, build_player.n_brown + build_player.n_grey)
+    build_player.n_points += n_brown_grey
+
+def add_1_points_per_max_blue(game, build_player):
+    n_blue = max(game.inactive_player().n_blue, build_player.n_blue)
+    build_player.n_points += n_blue
+
+def add_1_points_per_max_green(game, build_player):
+    n_green = max(game.inactive_player().n_green, build_player.n_green)
+    build_player.n_points += n_green
+
+def add_1_points_per_max_red(game, build_player):
+    n_red = max(game.inactive_player().n_red, build_player.n_red)
+    build_player.n_points += n_red
+
+def add_2_points_per_max_wonder(game, build_player):
+    n_wonders = max(numpy.intersect1d(game.inactive_player().wonders, game_inactive_player().built_cards),numpy.intersect1d(build_player.wonders, build_player.built_cards))
+    build_player.n_points += 2*n_wonders
+
+def add_1_points_per_max_3_coins(game, build_player):
+    n_3_coins = max(game.inactive_player().n_coin // 3, build_player.n_coin // 3)
+    build_player.n_points += n_3_coins
+    return
 
 def no_action(game):
     return

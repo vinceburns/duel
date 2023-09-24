@@ -1,0 +1,19 @@
+#name,color,cost,free_build,wp,build_func,endgam_func,image
+#None == n/a,,,,,,,
+#name -- Useful for us tracking which card we meant to be mapping,,,,,,,
+#color -- color of the card,,,,,,,
+#cost -- The resouces this card costs:,,,,,,,
+#     w:<n_woods>,s:<n_stone>,b:<n_brick>,p:<n_paper>,g:<n_glass>,"c:<n_coins> or ""free"" if it is so.",,
+#free_build -- The white privelage that allows needing of the cost, See cost.py for available white priveleges.,,,,,,
+#wp -- The white privelege that comes with this card. See cost.py for available white priveleges.,,,,,,,
+#build_func -- Function that lives in build_action.py. this awards coins, resources, etc.,,,,,
+#endgame_func -- Awards points @todo ,,,,,,,
+#image -- Image for the Frontend. @todo  ,,,,,,,
+#fill this out based on page 18 and 19 of the PDF.,,,,,,,
+name=merchants_guild,color=purple,cost=(w:1 b:1 p:1 g:1),free_build=None,wp=None,build_func=add_1_coins_per_max_yellow,endgame_func=add_1_points_per_max_yellow,image=None
+name=shipowners_guild,color=purple,cost=(s:1 b:1 p:1 g:1),free_build=None,wp=None,build_func=add_1_coins_per_max_brown_grey,endgame_func=add_1_points_per_max_brown_grey,image=None
+name=builders_guild,color=purple,cost=(w:1 s:2 b:1 g:1),free_build=None,wp=None,build_func=None,endgame_func=add_2_points_per_max_wonder,image=None
+name=magistrates_guild,color=purple,cost=(w:2 b:1 p:1),free_build=None,wp=None,build_func=add_1_coins_per_max_blue,endgame_func=add_1_points_per_max_blue,image=None
+name=scientists_guild,color=purple,cost=(w:2 b:2),free_build=None,wp=None,build_func=add_1_coins_per_max_green,endgame_func=add_1_points_per_max_green,image=None
+name=moneylenders_guild,color=purple,cost=(w:2 s:2),free_build=None,wp=None,build_func=None,endgame_func=add_1_points_per_max_3_coins,image=None
+name=tacticians_guild,color=purple,cost=(s:2 b:1 p:1),free_build=None,wp=None,build_func=add_1_coins_per_max_red,endgame_func=add_1_points_per_max_red,image=None
